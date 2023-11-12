@@ -31,7 +31,7 @@ class DocenteController extends Controller
         $row = new Docente();
         $row->id = $input['id'];
         $row->nombre= $input['nombre'];
-        $row->ocupacion = $input['ocupcion'];
+        $row->ocupacion = $input['ocupacion'];
         $row->save();
         return new Response($row);
     }
