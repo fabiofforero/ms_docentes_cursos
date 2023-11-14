@@ -29,6 +29,9 @@ $router->post('cursos','CursoController@store');
 $router->put('cursos/{id}','CursoController@update');
 $router->delete('cursos/{id}','CursoController@destroy');
 
+$router->get('docentes/{id}/cursos', 'DocenteController@cursos');
+
+
 $router->get('ocupaciones','OcupacionController@index');
 $router->get('ocupaciones/{id}','OcupacionController@show');
 $router->post('ocupaciones','OcupacionController@store');
