@@ -89,18 +89,18 @@ class DocenteController extends Controller
     }
     public function cursos($id)
     {
-        // Busca el docente por ID
+        
         $docente = Docente::find($id);
 
-        // Verifica si el docente existe
+        
         if (empty($docente)) {
             return new Response('El docente no existe', 404);
         }
 
-        // Obtiene los cursos asociados al docente
+       
         $cursos = Curso::where('docente', $id)->get();
 
-        // Devuelve la respuesta en formato JSON
+        
         return new Response($cursos);
     }
 }
